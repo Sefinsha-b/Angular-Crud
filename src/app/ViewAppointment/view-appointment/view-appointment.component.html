@@ -1,1 +1,63 @@
-<p>view-appointment works!</p>
+<div class="main-wrapper">
+    <!-- <app-menu></app-menu> -->
+    <div class="page-wrapper">
+        <div class="content">
+            <div class="row">
+                <div class="col-sm-4 col-3">
+                    <h4 class="page-title">View Page</h4>
+                </div>
+                <!-- <div class="col-sm-8 col-9 text-right m-b-20">
+                  <a href="Add Appointment" [routerLink]="['/add-appointments']" class="btn btn btn-primary btn-rounded float-right"><i class="fa fa-plus" id="add-button"></i> Add Appointment</a>
+              </div> -->
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="table-responsive">
+                        <table class="table table-border table-striped custom-table mb-0">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Name</th>
+                                    <th>Password</th>
+                                    <th>Passport NUMBER</th>
+                                </tr>
+                            </thead>
+
+                            <tr *ngFor="let ViewPage of View">
+                                <td>{{ViewPage.id}}</td>
+                                <td>{{ViewPage.Name}}</td>
+                                <td>{{ViewPage.Password}}</td>
+                                <td>{{ViewPage.Passport}}</td>
+
+                                <div>
+
+
+
+                                    <td class="text-right">
+                                        <div class="flex-container">
+                                            <!-- <button type="submit" class="btn btn-danger" (click)="deleteAppointment(appointment)">Delete</button> -->
+                                            <button type="submit" class="btn btn-secondary"
+                                               routerLink="/Edit/{{ViewPage.id}}">Edits</button>
+                                            
+                                        </div>
+
+
+                                    </td>
+                                </div>
+
+                            </tr>
+
+
+
+
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--  -->

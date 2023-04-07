@@ -10,16 +10,18 @@ import { ServicesService } from 'src/app/services.service';
 export class AddAppointmentComponent implements OnInit {
 
   addForm = new FormGroup({
-    Email: new FormControl(""),
+    Name: new FormControl(""),
     Password: new FormControl(""),
     Passport: new FormControl("")
+    
+    
   })
 
   AppForm: any;
   AppData: any;
   ngOnInit(): void {
     this.GetData();
-
+this.Submit();
   }
 
   constructor(private ConsAdd: ServicesService) { }
@@ -37,6 +39,7 @@ export class AddAppointmentComponent implements OnInit {
   GetData() {
     return this.ConsAdd.GetApi().subscribe((resp: any) => {
       this.AppData = resp;
+      console.log(resp);
     }
 
     )

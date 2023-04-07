@@ -6,9 +6,10 @@ import { EditAppointmentComponent } from './EditAppointment/edit-appointment/edi
 import { AddAppointmentComponent } from './AddAppointment/add-appointment/add-appointment.component';
 
 const routes: Routes = [
+  {path: '', redirectTo:"viewForLoan",pathMatch:'full'},
   {path:'AddForm',component:AddAppointmentComponent},
   {path:'View',component:ViewAppointmentComponent},
-  {path:'Edit',component:EditAppointmentComponent}
+  {path:'Edit/:id',component:EditAppointmentComponent}
 ];
 
 @NgModule({
